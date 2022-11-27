@@ -61,10 +61,10 @@ const Books = () => {
                         {/* <img className="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp" /> */}
                         <img className="gallery-image" src={require('./bookGallery/dist/img/9.jpg')} alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer" />
                     </div>
-                    <div className="gallery-item">
-                        {/* <img className="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp" /> */}
+                    {/* <div className="gallery-item">
+                        <img className="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp" />
                         <img className="gallery-image" src={require('./bookGallery/dist/img/10.jpg')} alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer" />
-                    </div>
+                    </div> */}
 
                 </div>
 

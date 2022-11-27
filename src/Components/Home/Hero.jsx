@@ -6,7 +6,7 @@ const Hero = () => {
             <div id="header-carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="w-100" src="img/carousel-1.jpg" alt="" />
+                        <img className="w-100" src="img/wall1.jpeg" alt="" />
                         <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div className="p-3" style={{ maxWidth: "900px" }}>
                                 {/* <img width="50%" src="img/mine/romanson.png" alt="" /> */}
@@ -21,7 +21,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img className="w-100" src="img/carousel-2.jpg" alt="" />
+                        <img className="w-100" src="img/wall2.jpeg" alt="" />
                         <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div className="p-3" style={{ maxWidth: "900px" }}>
                                 {/* <!-- <h5 className="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5> --> */}
