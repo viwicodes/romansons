@@ -8,7 +8,7 @@ const More = () => {
             <div style={{ marginTop: "20%" }}>
                 <div className="blog-card">
                     <div className="meta">
-                        <div className="photo" style={{ backgroundImage: "url('img/mine/servi1.jpg')" }}></div>
+                        <div className="photo" style={{ backgroundImage: "url('img/mine/more3.jpeg')" }}></div>
                         {/* <!-- {/* <ul className="details">
                     <li className="author"><a href="#">John Doe</a></li>
                     <li className="date">Aug. 24, 2015</li>
@@ -47,7 +47,7 @@ const More = () => {
                 <br />
                 <div className="blog-card alt">
                     <div className="meta">
-                        <div className="photo" style={{ backgroundImage: "url('img/mine/servi2.jpg')" }}></div>
+                        <div className="photo" style={{ backgroundImage: "url('img/mine/more2.jpeg')" }}></div>
                         {/* <!-- {/* <ul className="details">
                     <li className="author"><a href="#">Jane Doe</a></li>
                     <li className="date">July. 15, 2015</li>
