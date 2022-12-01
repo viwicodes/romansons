@@ -27,7 +27,6 @@ const App =()=> {
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/explore' element={<ExplorePage/>}/>
           <Route path='/books' element={<Books/>}/>
-          
         </Routes>
       </>
     );
