@@ -86,7 +86,7 @@ const Nav = () => {
                                 </div>
                             </div>
                             <div className="nav-item dropdown">
-                                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">{user.email}</a>
+                                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">{user.email.match(/^([^@]*)@/)[1]}</a>
                                 <div className="dropdown-menu m-0">
                                     {/* <a href="login" className="dropdown-item">Login</a>
                                     <a href="signup" className="dropdown-item">SignUp</a> */}
