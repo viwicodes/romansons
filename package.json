@@ -8,8 +8,10 @@
     "@mui/material": "^5.9.2",
     "@testing-library/react": "^13.3.0",
     "bootstrap": "^5.2.0",
+    "firebase": "^9.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-event-observer": "^0.5.11",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1"
   },
