@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useNavigate } from "react";
 import './dist/style2.css';
 import bg from './dist/servi3.jpg';
 import logo from './dist/romanson.png'
@@ -71,7 +71,7 @@ const LoginComp = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirm, setConfirm] = useState('')
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const {signUp} =  useAuth()
 
 
