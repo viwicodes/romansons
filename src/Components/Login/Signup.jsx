@@ -295,7 +295,7 @@ const LoginComp = () => {
                 </div>
                 <div className="submitBtnConts">
                   <input
-                    onClick={() => clickSubmit(e)}
+                    onClick={(e) => clickSubmit(e)}
                     type="submit"
                     className="submitBtn"
                     value="Signup"
