@@ -1,10 +1,9 @@
-import React, { useState, useNavigate } from "react";
+import React, { useState } from "react";
 import './dist/style2.css';
 import bg from './dist/servi3.jpg';
 import logo from './dist/romanson.png'
-import { app } from '../../firebase-config';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { useAuth } from '../../contexts/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 const LoginAnimation = () => {
 
@@ -71,8 +70,10 @@ const LoginComp = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirm, setConfirm] = useState('')
-  // let navigate = useNavigate();
-  const {signUp} =  useAuth()
+  const navigate = useNavigate();
+  const { signUp } = useAuth()
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
 
   function handleEmail(e) {
@@ -87,10 +88,24 @@ const LoginComp = () => {
     setConfirm(e.target.value)
   }
 
-  function clickSubmit(e) {
+  async function clickSubmit(e) {
     e.preventDefault()
 
-    signUp(email, password)
+    if (password !== confirm) {
+      return setError("Passwords not matching.")
+    }
+
+    try {
+      setError('')
+      setLoading(true)
+      await signUp(email, password)
+      navigate('/login')
+      console.log("Account created successfully")
+    } catch (e) {
+      setError('Account not created.')
+      console.log(e)
+    }
+    setLoading(false)
 
   }
 
@@ -101,6 +116,7 @@ const LoginComp = () => {
     <div style={{
       position: "absolute", height: "100%", left: "0", width: "100%"
     }}>
+      {error && console.log(error)}
       <div
         style={{
           width: "100%",
@@ -295,6 +311,7 @@ const LoginComp = () => {
                 </div>
                 <div className="submitBtnConts">
                   <input
+                    disabled={loading}
                     onClick={(e) => clickSubmit(e)}
                     type="submit"
                     className="submitBtn"

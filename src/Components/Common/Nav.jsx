@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { onAuthStateChanged } from 'firebase/auth'
-
+import { useAuth, user } from '../../contexts/AuthContext'
 
 const Nav = () => {
     const navigate = useNavigate()
+    const { signOut, user } = useAuth();
     useEffect(() => {
         let authToken = sessionStorage.getItem('Auth Token')
-        if (authToken) {
-            console.log("Logged in")
+        if (user) {
+            console.log(`Logged in as ${user.email}`)
         }
         else {
-            console.log("No Auth Token")
+            console.log("No user")
         }
 
     }, [])
     const handleLogout = () => {
-        sessionStorage.removeItem('Auth Token');
+        signOut();
         console.log("Logged out")
     }
     return (

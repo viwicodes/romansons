@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // import loginBgImage from "../../../../img/book3.jpg";
 // import logos from "../../../../img/romansonsLogo.png";
 import { useNavigate } from "react-router-dom";
@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom";
 import './dist/style2.css';
 import bg from './dist/servi3.jpg';
 import logo from './dist/romanson.png'
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
-
+import { useAuth } from '../../contexts/AuthContext'
 
 // interface LogUsr {
 //   uname: string;second
@@ -72,7 +71,10 @@ const LoginAnimation = () => {
 const LoginComp = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const { signIn } = useAuth();
 
 
   function handleEmail(e) {
@@ -83,15 +85,19 @@ const LoginComp = () => {
     setPassword(e.target.value)
   }
 
-  function clickSubmit() {
+  async function clickSubmit() {
 
-    const authentication = getAuth();
-
-    signInWithEmailAndPassword(authentication, email, password)
-      .then((response) => {
-        navigate('/')
-        sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
-      })
+    try {
+      setError('')
+      setLoading(true)
+      await signIn(email, password)
+      navigate('/')
+      console.log("Logged In successfully")
+    } catch (e) {
+      setError('Couldn\'t Log In')
+      console.log(e)
+    }
+    setLoading(false)
 
   }
   return (
