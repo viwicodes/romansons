@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 :root {
   --body-bg-color: #e5f4f9;
   --body-color-light: #8b939c;
@@ -36,7 +37,15 @@ img {
   margin: 0;
 } */
 
-.likes, .year-book, .author, .main-menu, .profile-menu, .profile, .browse-category, .browse, .header {
+.likes,
+.year-book,
+.author,
+.main-menu,
+.profile-menu,
+.profile,
+.browse-category,
+.browse,
+.header {
   display: flex;
   align-items: center;
 }
@@ -51,9 +60,11 @@ img {
   overflow: hidden;
   box-shadow: 0px 2px 50px 10px rgba(0, 0, 0, 0.21);
 }
+
 .flickity-prev-next-button .arrow {
   fill: #363636 !important;
 }
+
 .header {
   height: 70px;
   width: 100%;
@@ -69,6 +80,7 @@ img {
 .search-bar {
   position: relative;
 }
+
 .search-bar input {
   height: 100%;
   width: 100%;
@@ -84,6 +96,7 @@ img {
   color: var(--body-color);
   font-family: var(--body-font);
 }
+
 .search-bar input::placeholder {
   color: var(--placeholder);
 }
@@ -92,6 +105,7 @@ img {
   border-right: 1px solid var(--border-color);
   white-space: nowrap;
 }
+
 .browse-category svg {
   width: 16px;
   margin: 2px 10px 0 8px;
@@ -102,6 +116,7 @@ img {
   font-weight: 400;
   margin-right: 120px;
 }
+
 .header-title span {
   font-weight: 500;
   color: var(--body-color);
@@ -119,6 +134,7 @@ img {
   cursor: pointer;
   flex-shrink: 0;
 }
+
 .user-profile:before {
   content: "";
   position: absolute;
@@ -135,9 +151,11 @@ img {
 .profile {
   flex-shrink: 0;
 }
+
 .profile-menu {
   border-left: 1px solid var(--border-color);
 }
+
 .profile svg {
   width: 16px;
   margin: 0 8px 0 15px;
@@ -156,10 +174,11 @@ img {
   position: relative;
   display: flex;
   padding: 25px;
-  width: 40%;
-  height: 290px !important;
   margin-right: 1px;
+  justify-content: flex-start;
+  align-items: center;
 }
+
 /* .book-cell:nth-child(1) {
   background-color: #fbadaf;
 }
@@ -175,10 +194,11 @@ img {
 .book-cell:nth-child(5) {
   background-color: #cbb5e2;
 } */
-.book-cell-light-color{
+.book-cell-light-color {
   background-color: #81d4fa;
 }
-.book-cell-dark-color{
+
+.book-cell-dark-color {
   background-color: #4fc3f7;
 }
 
@@ -200,6 +220,7 @@ img {
 .flickity-prev-next-button.previous {
   left: 15px;
 }
+
 .flickity-prev-next-button.next {
   right: 15px;
 }
@@ -209,15 +230,16 @@ img {
 }
 
 .book-photo {
-  width: 158.5px;
+  /* width: 158.5px; */
   flex-shrink: 0;
   bottom: -35px;
-  left: 35px;
+  /* left: 35px; */
   margin-top: -20px;
   border-radius: 2px;
   box-shadow: -2px 6px 19px 0px #7f818e;
   transition: 0.3s ease;
 }
+
 .book-photo:hover {
   transform: scale(1.03);
 }
@@ -226,8 +248,8 @@ img {
   flex-shrink: 0;
 }
 
-.book-img > img{
-  margin-top:1.7%;
+.book-img>img {
+  margin-top: 1.7%;
 }
 
 .book-title {
@@ -254,6 +276,7 @@ img {
   padding: 0 20px;
   color: #ffffff;
   /* overflow: hidden; */
+  margin-left: -250px;
 }
 
 fieldset,
@@ -273,11 +296,11 @@ h1 {
   border: none;
 }
 
-.rating > input {
+.rating>input {
   display: none;
 }
 
-.rating > label:before {
+.rating>label:before {
   margin-right: 5px;
   margin-top: 10px;
   font-size: 0.9em;
@@ -286,73 +309,73 @@ h1 {
   content: "";
 }
 
-.rating > label {
+.rating>label {
   color: #fff;
   float: right;
 }
 
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
+.rating>input:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
   color: #d85d61;
 }
 
-.rating > input:checked + label:hover,
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label {
+.rating>input:checked+label:hover,
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+.rating>input:checked~label:hover~label {
   color: #d85d61;
 }
 
-.blue > input:checked ~ label,
-.blue:not(:checked) > label:hover,
-.blue:not(:checked) > label:hover ~ label {
+.blue>input:checked~label,
+.blue:not(:checked)>label:hover,
+.blue:not(:checked)>label:hover~label {
   color: #458997;
 }
 
-.blue > input:checked + label:hover,
-.blue > input:checked ~ label:hover,
-.blue > label:hover ~ input:checked ~ label,
-.blue > input:checked ~ label:hover ~ label {
+.blue>input:checked+label:hover,
+.blue>input:checked~label:hover,
+.blue>label:hover~input:checked~label,
+.blue>input:checked~label:hover~label {
   color: #458997;
 }
 
-.purple > input:checked ~ label,
-.purple:not(:checked) > label:hover,
-.purple:not(:checked) > label:hover ~ label {
+.purple>input:checked~label,
+.purple:not(:checked)>label:hover,
+.purple:not(:checked)>label:hover~label {
   color: #a76287;
 }
 
-.purple > input:checked + label:hover,
-.purple > input:checked ~ label:hover,
-.purple > label:hover ~ input:checked ~ label,
-.purple > input:checked ~ label:hover ~ label {
+.purple>input:checked+label:hover,
+.purple>input:checked~label:hover,
+.purple>label:hover~input:checked~label,
+.purple>input:checked~label:hover~label {
   color: #a76287;
 }
 
-.yellow > input:checked ~ label,
-.yellow:not(:checked) > label:hover,
-.yellow:not(:checked) > label:hover ~ label {
+.yellow>input:checked~label,
+.yellow:not(:checked)>label:hover,
+.yellow:not(:checked)>label:hover~label {
   color: #ffad58;
 }
 
-.yellow > input:checked + label:hover,
-.yellow > input:checked ~ label:hover,
-.yellow > label:hover ~ input:checked ~ label,
-.yellow > input:checked ~ label:hover ~ label {
+.yellow>input:checked+label:hover,
+.yellow>input:checked~label:hover,
+.yellow>label:hover~input:checked~label,
+.yellow>input:checked~label:hover~label {
   color: #ffad58;
 }
 
-.dark-purp > input:checked ~ label,
-.dark-purp:not(:checked) > label:hover,
-.dark-purp:not(:checked) > label:hover ~ label {
+.dark-purp>input:checked~label,
+.dark-purp:not(:checked)>label:hover,
+.dark-purp:not(:checked)>label:hover~label {
   color: #905587;
 }
 
-.dark-purp > input:checked + label:hover,
-.dark-purp > input:checked ~ label:hover,
-.dark-purp > label:hover ~ input:checked ~ label,
-.dark-purp > input:checked ~ label:hover ~ label {
+.dark-purp>input:checked+label:hover,
+.dark-purp>input:checked~label:hover,
+.dark-purp>label:hover~input:checked~label,
+.dark-purp>input:checked~label:hover~label {
   color: #905587;
 }
 
@@ -385,30 +408,39 @@ h1 {
   width: 160px;
   border-radius: 20px;
 }
+
 .book-see:hover {
   color: #ff6e72;
 }
+
 .book-see.book-blue {
   color: #a4e0eb;
 }
+
 .book-see.book-blue:hover {
   color: #22cdec;
 }
+
 .book-see.book-pink {
   color: #edb9d6;
 }
+
 .book-see.book-pink:hover {
   color: #ff6dbe;
 }
+
 .book-see.book-yellow {
   color: #fdca95;
 }
+
 .book-see.book-yellow:hover {
   color: #fb9124;
 }
+
 .book-see.book-purple {
   color: #cbb5e2;
 }
+
 .book-see.book-purple:hover {
   color: #a764ec;
 }
@@ -455,13 +487,14 @@ h1 {
 .book-types {
   margin-left: auto;
 }
+
 .book-types a {
   text-decoration: none;
   color: var(--body-color);
   font-size: 14px;
 }
 
-.book-type + .book-type {
+.book-type+.book-type {
   margin-left: 20px;
 }
 
@@ -469,10 +502,14 @@ h1 {
   position: relative;
   transition: 0.2s;
 }
-.book-type.active, .book-type:hover {
+
+.book-type.active,
+.book-type:hover {
   -webkit-text-stroke: 0.3px;
 }
-.book-type.active:before, .book-type:hover:before {
+
+.book-type.active:before,
+.book-type:hover:before {
   content: "";
   position: absolute;
   width: 28px;
@@ -482,15 +519,19 @@ h1 {
   background-color: #67d4ea;
   box-shadow: 0px -1px 5px 0px #67d4ea;
 }
+
 .book-type:nth-child(2):before {
   right: 12px;
 }
+
 .book-type:nth-child(3):before {
   right: 8px;
 }
+
 .book-type:nth-child(4):before {
   right: 6px;
 }
+
 .book-type:nth-child(5):before {
   right: 20px;
 }
@@ -499,12 +540,14 @@ h1 {
   padding: 0 30px;
 }
 
-.author + .author {
+.author+.author {
   margin-top: 20px;
 }
+
 .author-name {
   font-size: 14px;
 }
+
 .author:last-child {
   margin-bottom: 40px;
 }
@@ -528,14 +571,17 @@ h1 {
   width: 45px;
   margin-right: 16px;
 }
+
 .year-book-name {
   margin-bottom: 15px;
   font-weight: 500;
 }
+
 .year-book-author {
   font-size: 13px;
 }
-.year-book + .year-book {
+
+.year-book+.year-book {
   margin-top: 20px;
 }
 
@@ -588,6 +634,7 @@ h1 {
   margin-bottom: 20px;
   transition: 0.3s ease;
 }
+
 .book-card-img:hover {
   transform: scale(1.04);
 }
@@ -615,7 +662,7 @@ h1 {
   white-space: nowrap;
 }
 
-.book-rate > label {
+.book-rate>label {
   color: #cccccc;
 }
 
@@ -624,16 +671,16 @@ h1 {
   white-space: nowrap;
 }
 
-.book-rate > input:checked ~ label,
-.book-rate:not(:checked) > label:hover,
-.book-rate:not(:checked) > label:hover ~ label {
+.book-rate>input:checked~label,
+.book-rate:not(:checked)>label:hover,
+.book-rate:not(:checked)>label:hover~label {
   color: #ff9700;
 }
 
-.book-rate > input:checked + label:hover,
-.book-rate > input:checked ~ label:hover,
-.book-rate > label:hover ~ input:checked ~ label,
-.book-rate > input:checked ~ label:hover ~ label {
+.book-rate>input:checked+label:hover,
+.book-rate>input:checked~label:hover,
+.book-rate>label:hover~input:checked~label,
+.book-rate>input:checked~label:hover~label {
   color: #ff9700;
 }
 
@@ -654,6 +701,7 @@ h1 {
   border-bottom: 1px solid #ebedef;
   position: relative;
 }
+
 .content-wrapper:before {
   content: "";
   position: absolute;
@@ -673,7 +721,8 @@ h1 {
 .like-profile {
   margin-top: 8px;
 }
-.like-profile + .like-profile {
+
+.like-profile+.like-profile {
   margin-left: -5px;
 }
 
@@ -691,6 +740,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .like-name span {
   font-weight: 600;
 }
@@ -700,30 +750,33 @@ h1 {
     width: 60%;
   }
 }
+
 @media (max-width: 765px) {
   .book-cell {
     width: 80%;
   }
 
 
-  .hide{
+  .hide {
     display: none;
   }
 
-  .book-title{
+  .book-title {
     font-size: larger;
   }
 
-  .book-author{
+  .book-author {
     font-size: small;
   }
 
 }
+
 @media (max-width: 575px) {
   .book-cell {
     width: 100%;
   }
 }
+
 @media (max-width: 458px) {
   .book-photo {
     width: 180px;
@@ -733,33 +786,34 @@ h1 {
     display: none;
   }
 
-  .hide{
+  .hide {
     display: none;
   }
 
-  .book-title{
+  .book-title {
     font-size: larger;
   }
 
-  .book-author{
+  .book-author {
     font-size: small;
   }
 }
+
 @media (max-width: 420px) {
   .book-see {
     width: 120px;
     font-size: 13px;
   }
 
-  .hide{
+  .hide {
     display: none;
   }
 
-  .book-title{
+  .book-title {
     font-size: larger;
   }
 
-  .book-author{
+  .book-author {
     font-size: small;
   }
 
@@ -770,13 +824,15 @@ h1 {
   .main-wrapper {
     margin-top: 50px;
   }
-  .book-img{
+
+  /* .book-img {
     position: absolute;
-    /* width: 10%; */
+    width: 10%;
     left: 50%;
     transform: translate(-50%, 0);
-  }
-  .book-content{
+  } */
+
+  .book-content {
     position: absolute;
     bottom: 12px;
     left: 50%;
@@ -786,39 +842,47 @@ h1 {
     font-size: 0.9rem;
   }
 }
+
 @media (max-width: 360px) {
-  .rating > label:before {
+  .rating>label:before {
     font-size: 0.8em;
   }
-  .hide{
+
+  .hide {
     display: none;
   }
 
-  .book-title{
+  .book-title {
     font-size: larger;
   }
 
-  .book-author{
+  .book-author {
     font-size: larger;
   }
 }
+
 @media (max-width: 1220px) {
   .card-vote {
     display: none;
   }
 }
+
 @media (max-width: 1085px) {
-  .book-rate > label {
+  .book-rate>label {
     font-size: 0.7em;
   }
 }
+
 @media (max-width: 1045px) {
   .books-of {
     display: none;
   }
 }
+
 @media (max-width: 725px) {
-  .browse-category, .search-bar {
+
+  .browse-category,
+  .search-bar {
     display: none;
   }
 
@@ -834,6 +898,7 @@ h1 {
     display: none;
   }
 }
+
 @media (max-width: 372px) {
   .card-content {
     padding: 20px;

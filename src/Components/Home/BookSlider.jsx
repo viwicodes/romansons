@@ -1,6 +1,7 @@
 
 import React, { useLayoutEffect } from 'react'
 import "./dist/style.css"
+import './dist/owl.css'
 import { useEffect, useState } from 'react'
 import BookCell from './SliderOne'
 import OwlCarousel from 'react-owl-carousel'
@@ -23,21 +24,22 @@ const BookSlider = () => {
     }
 
   }, []);
+
+  const options = {
+    items: 2,
+    loop: true,
+    dots: false,
+    autoplay : true,
+    autoplaySpeed: 2000,
+    autoplayTimeout: 3000,
+  }
+
   return (
     <>
       <div style={{ marginTop: "5rem" }} className="book-store">
         <div className="book-slide">
           {/* <div className="book js-flickity" data-flickity-options='{ "wrapAround": true }'> */}
-          <OwlCarousel
-            // items={3}
-            loop={true}
-            dots={false}
-            autoPlay={true}
-            autoplaySpeed={2000}
-            autoplayTimeout={3000}
-            nav={true}
-            className="book"
-          >
+          <OwlCarousel {...options}          >
             <BookCell type="dark" image={require('./dist/img/1.jpg')} title="പൊതുവിജ്ഞാന വിജയമന്ത്രങ്ങൾ" author="Vipin Thomas" />
             <BookCell type="light" image={require('./dist/img/2.jpg')} title="വധശിക്ഷയ്ക്കു വിധിക്കപ്പെട്ടവന്റെ അവസാന ദിനങ്ങൾ" author="Victor Hugo" />
             <BookCell type="dark" image={require('./dist/img/3.jpg')} title="Pavlon And The Dog" author="Sanjeev Kalarikkathara" />
