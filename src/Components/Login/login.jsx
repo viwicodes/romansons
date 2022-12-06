@@ -8,6 +8,8 @@ import './dist/style2.css';
 import bg from './dist/servi3.jpg';
 import logo from './dist/romanson.png'
 import { useAuth } from '../../contexts/AuthContext'
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 // interface LogUsr {
 //   uname: string;second
@@ -87,15 +89,30 @@ const LoginComp = () => {
 
   async function clickSubmit() {
 
+
+    if (email.length <= 0 || password.length <= 0) {
+      toast.error("Please type valid email and password.")
+    }
+
     try {
-      setError('')
-      setLoading(true)
       await signIn(email, password)
-      navigate('/')
-      console.log("Logged In successfully")
+        .then((res) => {
+          if (res) {
+            toast.success("Logged in successfully!")
+            setTimeout(function () {
+              navigate('/')
+            }, 5000);
+          }
+
+        })
     } catch (e) {
-      setError('Couldn\'t Log In')
-      console.log(e)
+
+      if(e.code === "auth/user-not-found"){
+        toast.error("Invalid username or password.")
+      }
+
+      console.log(e.code)
+
     }
     setLoading(false)
 
@@ -104,6 +121,7 @@ const LoginComp = () => {
     <div style={{
       position: "absolute", height: "100%", left: "0", width: "100%"
     }}>
+      <ToastContainer />
       <div
         style={{
           width: "100%",
@@ -277,7 +295,7 @@ const LoginComp = () => {
 
                 <div className="inputContainer">
                   <label className="login-label">Email</label>
-                  <input type="email" onChange={(e) => handleEmail(e)} className="input" placeholder="" />
+                  <input type="email" required="true" onChange={(e) => handleEmail(e)} className="input" placeholder="" />
                   <br />
                 </div>
                 <div className="inputContainer">

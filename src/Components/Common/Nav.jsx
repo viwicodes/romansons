@@ -1,17 +1,23 @@
 import React, { useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify'
 import { useAuth, user } from '../../contexts/AuthContext'
 
 const Nav = () => {
     const navigate = useNavigate()
     const { signOut, user } = useAuth();
-    function handleLogout(){
+    function handleLogout() {
         signOut()
-        console.log("Sign out")
+            .then((res) => {
+                if (res) {
+                    toast.success("Logged out successfully!")
+                }
+            })
     }
     if (!user) {
         return (
             <div>
+                <ToastContainer />
                 <nav style={{ backgroundColor: "rgba(250, 250, 250, 0.623)" }}
                     className="navbar navbar-expand-lg navbar-dark px-4 py-3 py-lg-0">
                     <div style={{ width: "188px" }}>

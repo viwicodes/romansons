@@ -19,7 +19,7 @@ const HowToPublish = () => {
                                 </div>
                                 <h4 className="mb-3">Register</h4>
                                 {/* <p className="m-0">Breif description</p > */}
-                                <a className="btn btn-lg btn-primary rounded" href="login.html">
+                                <a className="btn btn-lg btn-primary rounded" href="signup">
                                     <i className="bi bi-arrow-right"></i>
                                 </a>
                             </div>
@@ -45,7 +45,7 @@ const HowToPublish = () => {
                                 </div>
                                 <h4 className="mb-3">Choose Package</h4>
                                 {/* <p className="m-0">Brief Description</p> */}
-                                <a className="btn btn-lg btn-primary rounded" href="">
+                                <a className="btn btn-lg btn-primary rounded" href="services">
                                     <i className="bi bi-arrow-right"></i>
                                 </a>
                             </div>

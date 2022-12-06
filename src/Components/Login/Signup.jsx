@@ -4,6 +4,9 @@ import bg from './dist/servi3.jpg';
 import logo from './dist/romanson.png'
 import { useAuth } from '../../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const LoginAnimation = () => {
 
@@ -92,18 +95,32 @@ const LoginComp = () => {
     e.preventDefault()
 
     if (password !== confirm) {
-      return setError("Passwords not matching.")
+      toast.error("Passwords not matching.")
+    }
+    if (password.length < 6 || confirm.length < 6) {
+      toast.error("Passwords should be minimum 6 charecters.")
+    }
+    if (password.length <= 0 || confirm.length <= 0 || email.length <= 0) {
+      toast.error("Please type valid email and password.")
     }
 
     try {
       setError('')
       setLoading(true)
       await signUp(email, password)
-      navigate('/login')
-      console.log("Account created successfully")
+        .then((res) => {
+          if (res) {
+            toast.success("Account created successfully!")
+            setTimeout(function () {
+              navigate('/login')
+            }, 5000);
+          }
+
+        })
     } catch (e) {
-      setError('Account not created.')
-      console.log(e)
+      if (e.code === 'auth/email-already-in-use') {
+        toast.error("Email already in use.")
+      }
     }
     setLoading(false)
 
@@ -116,7 +133,7 @@ const LoginComp = () => {
     <div style={{
       position: "absolute", height: "100%", left: "0", width: "100%"
     }}>
-      {error && console.log(error)}
+      <ToastContainer />
       <div
         style={{
           width: "100%",

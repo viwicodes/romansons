@@ -15,6 +15,10 @@ export default function AuthProvider({ children }) {
 
     function signUp(email, passsword) {
         return auth.createUserWithEmailAndPassword(email, passsword)
+        // .then(console.log("Logged in successfully!!"))
+        // .catch((err) => {
+        //     console.log(err)
+        // })
     }
 
 
