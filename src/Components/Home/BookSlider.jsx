@@ -29,7 +29,7 @@ const BookSlider = () => {
     items: 2,
     loop: true,
     dots: false,
-    autoplay : true,
+    autoplay: true,
     autoplaySpeed: 2000,
     autoplayTimeout: 3000,
   }
@@ -42,7 +42,7 @@ const BookSlider = () => {
           <OwlCarousel {...options}          >
             <BookCell type="dark" image={require('./dist/img/1.jpg')} title="പൊതുവിജ്ഞാന വിജയമന്ത്രങ്ങൾ" author="Vipin Thomas" />
             <BookCell type="light" image={require('./dist/img/2.jpg')} title="വധശിക്ഷയ്ക്കു വിധിക്കപ്പെട്ടവന്റെ അവസാന ദിനങ്ങൾ" author="Victor Hugo" />
-            <BookCell type="dark" image={require('./dist/img/3.jpg')} title="Pavlon And The Dog" author="Sanjeev Kalarikkathara" />
+            <BookCell type="dark" image={require('./dist/img/3.jpg')} title="Pavlov And The Dog" author="Sanjeev Kalarikkathara" />
             <BookCell type="light" image={require('./dist/img/4.jpg')} title="വിശ്വസാഹിത്യ പാഠങ്ങൾ" author="Dr.Munjinada Padmakumar" />
             <BookCell type="dark" image={require('./dist/img/5.jpg')} title="ഗീതാഞ്ജലി" author="Rabindranath Tagore" />
             <BookCell type="light" image={require('./dist/img/6.jpg')} title="ഇന്ത്യാ ചരിത്രം കുട്ടികൾക്ക്" author="D. Munjinad Padmakumar" />
