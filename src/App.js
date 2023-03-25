@@ -11,6 +11,7 @@ import Login from './Pages/loginPage'
 import Signup from './Pages/SignupPage';
 import ExplorePage from './Pages/ExplorePage';
 import Books from './Components/Gallery/Books';
+import Blog1 from './Components/Blogs/Blog1';
 // import AuthProvider from './contexts/AuthContext';
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/signup' element={<Signup />} />
         <Route path='/explore' element={<ExplorePage />} />
         <Route path='/books' element={<Books />} />
+        <Route path='/blogs/some' element={<Blog1 />} />
       </Routes>
       {/* </AuthProvider> */}
     </>
