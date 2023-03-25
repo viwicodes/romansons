@@ -11,26 +11,26 @@ import Login from './Pages/loginPage'
 import Signup from './Pages/SignupPage';
 import ExplorePage from './Pages/ExplorePage';
 import Books from './Components/Gallery/Books';
-import AuthProvider from './contexts/AuthContext';
+// import AuthProvider from './contexts/AuthContext';
 
 const App = () => {
   return (
     <>
-      <AuthProvider>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/services' element={<ServicesPage />} />
-          <Route path='/testimonial' element={<TestimonialPage />} />
-          <Route path='/blog' element={<BlogPage />} />
-          <Route path='/contact' element={<ContactUsPage />} />
-          <Route path='/gallery' element={<GalleryPage />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/explore' element={<ExplorePage />} />
-          <Route path='/books' element={<Books />} />
-        </Routes>
-      </AuthProvider>
+      {/* <AuthProvider> */}
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/services' element={<ServicesPage />} />
+        <Route path='/testimonial' element={<TestimonialPage />} />
+        <Route path='/blog' element={<BlogPage />} />
+        <Route path='/contact' element={<ContactUsPage />} />
+        <Route path='/gallery' element={<GalleryPage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/explore' element={<ExplorePage />} />
+        <Route path='/books' element={<Books />} />
+      </Routes>
+      {/* </AuthProvider> */}
     </>
   );
 }

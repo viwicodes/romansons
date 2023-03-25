@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './dist/style2.css';
 import bg from './dist/servi3.jpg';
 import logo from './dist/romanson.png'
-import { useAuth } from '../../contexts/AuthContext'
+// import { useAuth } from '../../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';

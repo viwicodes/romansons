@@ -1,55 +1,55 @@
-import React from 'react'
- 
-import { auth } from '../firebase-config'
+// import React from 'react'
 
-const AuthContext = React.createContext()
+// import { auth } from '../firebase-config'
 
-export function useAuth() {
-    return useContext(AuthContext)
-}
+// const AuthContext = React.createContext()
 
-export default function AuthProvider({ children }) {
+// export function useAuth() {
+//     return useContext(AuthContext)
+// }
 
-    const [user, setUser] = useState()
-    const [loading, setLoading] = useState(true)
+// export default function AuthProvider({ children }) {
 
-    function signUp(email, passsword) {
-        return auth.createUserWithEmailAndPassword(email, passsword)
-        // .then(console.log("Logged in successfully!!"))
-        // .catch((err) => {
-        //     console.log(err)
-        // })
-    }
+//     const [user, setUser] = useState()
+//     const [loading, setLoading] = useState(true)
 
-
-    function signIn(email, passsword){
-        return auth.signInWithEmailAndPassword(email, passsword)
-    }
-
-    function signOut(){
-        return auth.signOut()
-    }
-
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(currUser => {
-            setUser(currUser)
-            setLoading(false)
-        })
-        return unsubscribe
-    }, [])
+//     function signUp(email, passsword) {
+//         return auth.createUserWithEmailAndPassword(email, passsword)
+//         // .then(console.log("Logged in successfully!!"))
+//         // .catch((err) => {
+//         //     console.log(err)
+//         // })
+//     }
 
 
+//     function signIn(email, passsword) {
+//         return auth.signInWithEmailAndPassword(email, passsword)
+//     }
 
-    const value = {
-        user,
-        signUp,
-        signIn,
-        signOut
-    }
+//     function signOut() {
+//         return auth.signOut()
+//     }
 
-    return (
-        <AuthContext.Provider value={value}>
-            {!loading && children}
-        </AuthContext.Provider>
-    )
-}
+//     useEffect(() => {
+//         const unsubscribe = auth.onAuthStateChanged(currUser => {
+//             setUser(currUser)
+//             setLoading(false)
+//         })
+//         return unsubscribe
+//     }, [])
+
+
+
+//     const value = {
+//         user,
+//         signUp,
+//         signIn,
+//         signOut
+//     }
+
+//     return (
+//         <AuthContext.Provider value={value}>
+//             {!loading && children}
+//         </AuthContext.Provider>
+//     )
+// }

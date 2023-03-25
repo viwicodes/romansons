@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import './dist/style2.css';
 import bg from './dist/servi3.jpg';
 import logo from './dist/romanson.png'
-import { useAuth } from '../../contexts/AuthContext'
+// import { useAuth } from '../../contexts/AuthContext'
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -107,7 +107,7 @@ const LoginComp = () => {
         })
     } catch (e) {
 
-      if(e.code === "auth/user-not-found"){
+      if (e.code === "auth/user-not-found") {
         toast.error("Invalid username or password.")
       }
 
