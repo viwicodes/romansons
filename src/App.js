@@ -13,6 +13,7 @@ import ExplorePage from './Pages/ExplorePage';
 import Books from './Components/Gallery/Books';
 import Blog1 from './Components/Blogs/Blog1';
 import Blog2 from './Components/Blogs/Blog2';
+import Blog3 from './Components/Blogs/Blog3';
 // import AuthProvider from './contexts/AuthContext';
 
 const App = () => {
@@ -33,10 +34,14 @@ const App = () => {
         <Route path='/books' element={<Books />} />
         <Route path='/blogs/reading-of-printed-books' element={<Blog1 />} />
         <Route path='/blogs/now-you-can-be-a-published' element={<Blog2 />} />
+        <Route path='/blogs/now-you-can-be-a-published-in-a-few-days' element={<Blog3 />} />
       </Routes>
       {/* </AuthProvider> */}
     </>
   );
 }
+
+
+// Randogm change
 
 export default App;
